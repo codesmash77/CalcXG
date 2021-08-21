@@ -1,0 +1,19 @@
+.button-wrapper{
+    height:4em;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-weight: lighter;
+    font-size: 1.5rem;
+    background-color:rgb(173, 245, 255);
+    color:#131211;
+    flex: 1;
+    outline: 2px solid rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.operator{
+    background-color:rgb(248, 158, 158);
+    color:rgb(255, 255, 255);
+    font-weight: bold; 
+}
