@@ -27,8 +27,15 @@ class App extends Component{
     }
 
     handleEqual =() =>{
+      try {
       this.setState({input: math.evaluate(this.state.input)});
     }
+    catch(error) {
+     if (error.toString().startsWith("SyntaxError:") || error.message.startsWith("Undefined symbol")) 
+      {console.log(`**\`SyntaxError:\`** \`\``);
+       alert(`\`SyntaxError:\`** \``);}
+    }
+  }
 
     render() {
     return(
