@@ -32,11 +32,12 @@ class App extends Component{
 
     render() {
     return(
-      <div className="app-wrapper bg-gray-100" >
+      <div className="app-wrapper bg-gray-900" >
         <div className="calc-wrapper  shadow-2xl">
           <Input input={this.state.input}></Input>
           <div className="row">
-            <ClearButton handleClear={
+            <ClearButton 
+             handleClear={
               ()=> this.setState({input:""})
             }>A/C</ClearButton>
             <Button handleClick={this.addToInput}>+/-</Button>
