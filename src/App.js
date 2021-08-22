@@ -17,6 +17,12 @@ class App extends Component{
       if(props==='x')
       {this.setState({
         input: this.state.input + '*'});}
+      else if(props==='%')
+        {this.setState({input: this.state.input + '/100'})}
+      else if(props==='+/-')
+        {this.setState({input: this.state.input + '*-1'})}
+      else if(props==='⌫')
+        {this.setState({input: this.state.input.slice(0, -1)})}
       else{this.setState({input: this.state.input + props})}
     }
 
@@ -29,6 +35,16 @@ class App extends Component{
       <div className="app-wrapper bg-gray-100" >
         <div className="calc-wrapper  shadow-2xl">
           <Input input={this.state.input}></Input>
+          <div className="row">
+            <ClearButton handleClear={
+              ()=> this.setState({input:""})
+            }>A/C</ClearButton>
+            <Button handleClick={this.addToInput}>+/-</Button>
+            <Button handleClick={this.addToInput}>%</Button>
+            <Button handleClick={this.addToInput}>⌫</Button>
+
+
+          </div>
           <div className="row">
             <Button handleClick={this.addToInput}>9</Button>
             <Button handleClick={this.addToInput}>8</Button>
@@ -52,11 +68,6 @@ class App extends Component{
             <Button handleClick={this.addToInput}>0</Button>
             <Button handleClick={this.handleEqual}>=</Button>
             <Button handleClick={this.addToInput}>-</Button>
-          </div>
-          <div className="row">
-            <ClearButton handleClear={
-              ()=> this.setState({input:""})
-            }>Clear</ClearButton>
           </div>
         </div>
       </div>
