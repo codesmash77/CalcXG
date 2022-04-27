@@ -1,3 +1,7 @@
+The app was deployed as a site on netlify. (https://calcxg.netlify.app/).
+![image](https://user-images.githubusercontent.com/33595080/165463491-3e4135e1-1b7d-4800-bf45-5491b141f687.png)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
